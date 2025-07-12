@@ -41,7 +41,14 @@ namespace PinStock_Inventory_Management
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            Home obj = new Home();
+            LogIn obj = new LogIn();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void OrderBtn_Click_1(object sender, EventArgs e)
+        {
+            Order obj = new Order();  
             obj.Show();
             this.Hide();
         }

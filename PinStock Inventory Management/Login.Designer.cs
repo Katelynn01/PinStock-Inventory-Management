@@ -1,4 +1,6 @@
-﻿namespace PinStock_Inventory_Management
+﻿using System.Windows.Forms;
+
+namespace PinStock_Inventory_Management
 {
     partial class LogIn
     {
@@ -58,7 +60,7 @@
             LoginBtn.TabIndex = 0;
             LoginBtn.Text = "Log In";
             LoginBtn.UseVisualStyleBackColor = true;
-            LoginBtn.Click += LoginBtn_Click;
+            LoginBtn.Click += LogInBtn_Click;
             // 
             // label1
             // 
@@ -148,5 +150,8 @@
         private TextBox textBox2;
         private CheckBox checkBox1;
         private PictureBox pictureBox1;
+
+       
     }
-}
+    
+        } 

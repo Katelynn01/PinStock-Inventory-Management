@@ -35,16 +35,17 @@
             custId = new Label();
             custname = new Label();
             datelbl = new Label();
-            productlist = new Label();
             backBtn = new Button();
-            custlistlbl = new Label();
             dateTimePicker1 = new DateTimePicker();
             insertbtn = new Button();
             viewbtn = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            custlistlbl = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -103,15 +104,6 @@
             datelbl.TabIndex = 14;
             datelbl.Text = "Order Date";
             // 
-            // productlist
-            // 
-            productlist.AutoSize = true;
-            productlist.Location = new Point(348, 77);
-            productlist.Name = "productlist";
-            productlist.Size = new Size(86, 20);
-            productlist.TabIndex = 15;
-            productlist.Text = "Product List";
-            // 
             // backBtn
             // 
             backBtn.Location = new Point(697, 411);
@@ -120,15 +112,7 @@
             backBtn.TabIndex = 16;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
-            // 
-            // custlistlbl
-            // 
-            custlistlbl.AutoSize = true;
-            custlistlbl.Location = new Point(604, 77);
-            custlistlbl.Name = "custlistlbl";
-            custlistlbl.Size = new Size(98, 20);
-            custlistlbl.TabIndex = 17;
-            custlistlbl.Text = "Customer List";
+            backBtn.Click += backBtn_Click;
             // 
             // dateTimePicker1
             // 
@@ -143,7 +127,7 @@
             insertbtn.Name = "insertbtn";
             insertbtn.Size = new Size(111, 27);
             insertbtn.TabIndex = 19;
-            insertbtn.Text = "Insert Order";
+            insertbtn.Text = "Print Order";
             insertbtn.UseVisualStyleBackColor = true;
             // 
             // viewbtn
@@ -159,6 +143,7 @@
             // 
             textBox1.Location = new Point(12, 262);
             textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Enter Customer Name";
             textBox1.Size = new Size(227, 27);
             textBox1.TabIndex = 21;
             // 
@@ -166,6 +151,7 @@
             // 
             textBox2.Location = new Point(12, 205);
             textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Enter Customer ID";
             textBox2.Size = new Size(227, 27);
             textBox2.TabIndex = 22;
             // 
@@ -173,8 +159,29 @@
             // 
             textBox3.Location = new Point(12, 148);
             textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Enter Order ID";
             textBox3.Size = new Size(227, 27);
             textBox3.TabIndex = 23;
+            // 
+            // custlistlbl
+            // 
+            custlistlbl.AutoSize = true;
+            custlistlbl.Location = new Point(542, 77);
+            custlistlbl.Name = "custlistlbl";
+            custlistlbl.Size = new Size(73, 20);
+            custlistlbl.TabIndex = 17;
+            custlistlbl.Text = "Order List";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.MenuBar;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(400, 113);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(360, 269);
+            dataGridView1.TabIndex = 26;
+            dataGridView1.DoubleClick += this.dataGridView1;
             // 
             // Order
             // 
@@ -182,6 +189,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -190,7 +198,6 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(custlistlbl);
             Controls.Add(backBtn);
-            Controls.Add(productlist);
             Controls.Add(datelbl);
             Controls.Add(custname);
             Controls.Add(custId);
@@ -198,8 +205,9 @@
             Controls.Add(orderlbl);
             Controls.Add(pictureBox1);
             Name = "Order";
-            Text = "Form1";
+            Text = "Order Dashboard";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,14 +220,14 @@
         private Label custId;
         private Label custname;
         private Label datelbl;
-        private Label productlist;
         private Button backBtn;
-        private Label custlistlbl;
         private DateTimePicker dateTimePicker1;
         private Button insertbtn;
         private Button viewbtn;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Label custlistlbl;
+        private DataGridView dataGridView1;
     }
 }

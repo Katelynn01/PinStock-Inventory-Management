@@ -16,5 +16,52 @@ namespace PinStock_Inventory_Management
         {
             InitializeComponent();
         }
-    }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            obj.Show();
+            this.Hide();
+        }
+
+        //private void DisplayCustomer()
+        //{
+        //    try
+        //    {
+        //        Con.Open();
+        //        string Query = "select * from Customer";
+        //        SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+        //        SqlCommandBuild sql = new SqlCommandBuild(sda);
+        //        var ds = new DataSet();
+        //        sda.Fill(ds);
+        //        dataGridView1.DataSource = ds.Tables[0];
+        //        Con.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        Con.Close();
+        //    }
+        //}
+
+        //private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        custId.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+        //        custname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally 
+        //    { 
+        //        Con.Close(); 
+        //    }
+        //}
+    }-
 }

@@ -114,6 +114,7 @@
             OrderBtn.TabIndex = 6;
             OrderBtn.Text = "Order";
             OrderBtn.UseVisualStyleBackColor = true;
+            OrderBtn.Click += OrderBtn_Click_1;
             // 
             // CustomerBtn
             // 
