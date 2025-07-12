@@ -37,6 +37,7 @@
             ProductBtn = new Button();
             OrderBtn = new Button();
             CustomerBtn = new Button();
+            logoutBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -102,7 +103,7 @@
             ProductBtn.TabIndex = 5;
             ProductBtn.Text = "Product";
             ProductBtn.UseVisualStyleBackColor = true;
-            ProductBtn.Click += this.ProductBtn_Click;
+            ProductBtn.Click += ProductBtn_Click;
             // 
             // OrderBtn
             // 
@@ -124,12 +125,23 @@
             CustomerBtn.Text = "Customer";
             CustomerBtn.UseVisualStyleBackColor = true;
             // 
+            // logoutBtn
+            // 
+            logoutBtn.Location = new Point(701, 414);
+            logoutBtn.Name = "logoutBtn";
+            logoutBtn.Size = new Size(91, 27);
+            logoutBtn.TabIndex = 8;
+            logoutBtn.Text = "Log Out";
+            logoutBtn.UseVisualStyleBackColor = true;
+            logoutBtn.Click += logoutBtn_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
+            Controls.Add(logoutBtn);
             Controls.Add(CustomerBtn);
             Controls.Add(OrderBtn);
             Controls.Add(ProductBtn);
@@ -159,5 +171,6 @@
         private Button ProductBtn;
         private Button OrderBtn;
         private Button CustomerBtn;
+        private Button logoutBtn;
     }
 }

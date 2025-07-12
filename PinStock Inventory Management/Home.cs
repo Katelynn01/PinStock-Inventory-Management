@@ -38,5 +38,12 @@ namespace PinStock_Inventory_Management
             obj.Show();
             this.Hide();
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
