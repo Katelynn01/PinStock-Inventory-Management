@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-      
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
-            pictureBox1 = new PictureBox();
+            logo = new PictureBox();
             productlbl = new Label();
             productIdlbl = new Label();
             PNamelbl = new Label();
@@ -49,24 +49,24 @@
             Deletebtn = new Button();
             categorycombobox = new ComboBox();
             comboBox2 = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dgProductList = new DataGridView();
             PListlbl = new Label();
             searchlbl = new Label();
             txtsearch = new TextBox();
             backBtn = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgProductList).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // logo
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 62);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
+            logo.Image = (Image)resources.GetObject("logo.Image");
+            logo.Location = new Point(12, 12);
+            logo.Name = "logo";
+            logo.Size = new Size(69, 62);
+            logo.SizeMode = PictureBoxSizeMode.Zoom;
+            logo.TabIndex = 9;
+            logo.TabStop = false;
             // 
             // productlbl
             // 
@@ -232,16 +232,16 @@
             comboBox2.TabIndex = 30;
             comboBox2.Text = "Enter Status";
             // 
-            // dataGridView1
+            // dgProductList
             // 
-            dataGridView1.BackgroundColor = Color.LavenderBlush;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.Lavender;
-            dataGridView1.Location = new Point(479, 98);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(264, 310);
-            dataGridView1.TabIndex = 31;
+            dgProductList.BackgroundColor = Color.LavenderBlush;
+            dgProductList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgProductList.GridColor = Color.Lavender;
+            dgProductList.Location = new Point(479, 98);
+            dgProductList.Name = "dgProductList";
+            dgProductList.RowHeadersWidth = 51;
+            dgProductList.Size = new Size(264, 310);
+            dgProductList.TabIndex = 31;
             // 
             // PListlbl
             // 
@@ -291,7 +291,7 @@
             Controls.Add(txtsearch);
             Controls.Add(searchlbl);
             Controls.Add(PListlbl);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgProductList);
             Controls.Add(comboBox2);
             Controls.Add(categorycombobox);
             Controls.Add(Deletebtn);
@@ -310,22 +310,20 @@
             Controls.Add(PNamelbl);
             Controls.Add(productIdlbl);
             Controls.Add(productlbl);
-            Controls.Add(pictureBox1);
+            Controls.Add(logo);
             Name = "Product";
-            Text = "Product Dashboard";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Product";
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgProductList).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
-            this.Text = "Product";
-            this.StartPosition = FormStartPosition.CenterScreen;
-        
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox logo;
         private Label productlbl;
         private Label productIdlbl;
         private Label PNamelbl;
@@ -346,7 +344,7 @@
         private Button Deletebtn;
         private ComboBox categorycombobox;
         private ComboBox comboBox2;
-        private DataGridView dataGridView1;
+        private DataGridView dgProductList;
         private Label PListlbl;
         private Label searchlbl;
         private TextBox txtsearch;

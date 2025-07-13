@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order));
-            pictureBox1 = new PictureBox();
+            logo = new PictureBox();
             orderlbl = new Label();
             orderIdlbl = new Label();
             custId = new Label();
@@ -37,26 +37,26 @@
             datelbl = new Label();
             backBtn = new Button();
             dateTimePicker1 = new DateTimePicker();
-            insertbtn = new Button();
+            printbtn = new Button();
             viewbtn = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             custlistlbl = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgOrderList = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgOrderList).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // logo
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 62);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            logo.Image = (Image)resources.GetObject("logo.Image");
+            logo.Location = new Point(12, 12);
+            logo.Name = "logo";
+            logo.Size = new Size(69, 62);
+            logo.SizeMode = PictureBoxSizeMode.Zoom;
+            logo.TabIndex = 8;
+            logo.TabStop = false;
             // 
             // orderlbl
             // 
@@ -121,14 +121,14 @@
             dateTimePicker1.Size = new Size(277, 27);
             dateTimePicker1.TabIndex = 18;
             // 
-            // insertbtn
+            // printbtn
             // 
-            insertbtn.Location = new Point(40, 381);
-            insertbtn.Name = "insertbtn";
-            insertbtn.Size = new Size(111, 27);
-            insertbtn.TabIndex = 19;
-            insertbtn.Text = "Print Order";
-            insertbtn.UseVisualStyleBackColor = true;
+            printbtn.Location = new Point(40, 381);
+            printbtn.Name = "printbtn";
+            printbtn.Size = new Size(111, 27);
+            printbtn.TabIndex = 19;
+            printbtn.Text = "Print Order";
+            printbtn.UseVisualStyleBackColor = true;
             // 
             // viewbtn
             // 
@@ -173,16 +173,17 @@
             custlistlbl.TabIndex = 17;
             custlistlbl.Text = "Order List";
             // 
-            // dataGridView1
+            // dgOrderList
             // 
-            dataGridView1.BackgroundColor = SystemColors.MenuBar;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(400, 113);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(360, 269);
-            dataGridView1.TabIndex = 26;
-            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
+            dgOrderList.BackgroundColor = Color.LavenderBlush;
+            dgOrderList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgOrderList.GridColor = Color.Lavender;
+            dgOrderList.Location = new Point(400, 113);
+            dgOrderList.Name = "dgOrderList";
+            dgOrderList.RowHeadersWidth = 51;
+            dgOrderList.Size = new Size(360, 269);
+            dgOrderList.TabIndex = 26;
+            dgOrderList.DoubleClick += dataGridView1_DoubleClick;
             // 
             // Order
             // 
@@ -190,12 +191,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgOrderList);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(viewbtn);
-            Controls.Add(insertbtn);
+            Controls.Add(printbtn);
             Controls.Add(dateTimePicker1);
             Controls.Add(custlistlbl);
             Controls.Add(backBtn);
@@ -204,21 +205,19 @@
             Controls.Add(custId);
             Controls.Add(orderIdlbl);
             Controls.Add(orderlbl);
-            Controls.Add(pictureBox1);
+            Controls.Add(logo);
             Name = "Order";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Order Dashboard";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgOrderList).EndInit();
             ResumeLayout(false);
             PerformLayout();
-            //Center to screen
-            this.Text = "Order";
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox logo;
         private Label orderlbl;
         private Label orderIdlbl;
         private Label custId;
@@ -226,12 +225,12 @@
         private Label datelbl;
         private Button backBtn;
         private DateTimePicker dateTimePicker1;
-        private Button insertbtn;
+        private Button printbtn;
         private Button viewbtn;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private Label custlistlbl;
-        private DataGridView dataGridView1;
+        private DataGridView dgOrderList;
     }
 }

@@ -59,7 +59,27 @@ namespace PinStock_Inventory_Management
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to Delete this product?");
+            var confirm = MessageBox.Show ("Are you sure you want to delete this product?","Confirm Delete",MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                //using (var con = Database.Getconnection())
+                //{
+                   
+                //        con.Open();
+                //        string query = "DELETE FROM Products WHERE ProductName = @name";
+                //        using (var cmd = new SqlCommand(query, con))
+                //        {
+                //            cmd.Parameters.AddWithValue("@name", textBox1.Text);
+                //            cmd.ExecuteNonQuery();
+                //        }
+                //        MessageBox.Show("Product deleted successfully!");
+                //        Product_Load();
+             
+                    
+                //}
+            }
         }
 
         private void Addbtn_Click(object sender, EventArgs e)
