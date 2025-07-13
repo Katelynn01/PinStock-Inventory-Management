@@ -15,6 +15,7 @@ namespace PinStock_Inventory_Management
         public Home()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -48,7 +49,14 @@ namespace PinStock_Inventory_Management
 
         private void OrderBtn_Click_1(object sender, EventArgs e)
         {
-            Order obj = new Order();  
+            Order obj = new Order();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void CustomerBtn_Click_1(object sender, EventArgs e)
+        {
+            Customer obj = new Customer();
             obj.Show();
             this.Hide();
         }

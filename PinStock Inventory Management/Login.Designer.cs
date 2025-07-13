@@ -1,9 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace PinStock_Inventory_Management
 {
     partial class LogIn
     {
+    
         /// <summary>
         ///  Required designer variable.
         /// </summary>
@@ -21,6 +23,7 @@ namespace PinStock_Inventory_Management
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 
@@ -135,9 +138,13 @@ namespace PinStock_Inventory_Management
             Controls.Add(LoginBtn);
             Name = "LogIn";
             Text = "LogIn";
+            Load += LogIn_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
+            //center to screen
+            this.Text = "LogIn";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         #endregion

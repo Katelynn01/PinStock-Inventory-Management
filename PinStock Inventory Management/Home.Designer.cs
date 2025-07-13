@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+       
 
         #region Windows Form Designer generated code
 
@@ -125,6 +126,7 @@
             CustomerBtn.TabIndex = 7;
             CustomerBtn.Text = "Customer";
             CustomerBtn.UseVisualStyleBackColor = true;
+            CustomerBtn.Click += CustomerBtn_Click_1;
             // 
             // logoutBtn
             // 
@@ -160,6 +162,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
+            //CenterToScreen
+            this.Text = "Home";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         #endregion

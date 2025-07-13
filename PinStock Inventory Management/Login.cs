@@ -7,6 +7,7 @@ namespace PinStock_Inventory_Management
         public LogIn()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;    
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,17 +24,19 @@ namespace PinStock_Inventory_Management
             if (textBox1.Text == " " && textBox2.Text == " ")
             {
                 MessageBox.Show("Invalid Username or Password.");
-            } else if (textBox1.Text == "Admin" && textBox2.Text == "admin123")
-                {
-                MessageBox.Show("LogIn Successfully!");
+            }
+            else if (textBox1.Text == "Admin" && textBox2.Text == "admin123")
+            {
+                
                 Home obj = new Home();
                 this.Hide();
                 obj.Show();
-            }else 
-            { 
-                MessageBox.Show("Invalid Username or Password."); 
             }
-                     
+            else
+            {
+                MessageBox.Show("Invalid Username or Password.");
+            }
+
         }
         private void LogIn_Load(object sender, EventArgs e)
         {
@@ -46,12 +49,16 @@ namespace PinStock_Inventory_Management
             {
                 textBox2.UseSystemPasswordChar = false;
             }
-            else { 
+            else
+            {
                 textBox2.UseSystemPasswordChar = true;
-            
+
             }
         }
-        
-        
+
+        private void LogIn_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

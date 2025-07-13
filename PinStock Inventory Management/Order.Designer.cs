@@ -138,6 +138,7 @@
             viewbtn.TabIndex = 20;
             viewbtn.Text = "View Order";
             viewbtn.UseVisualStyleBackColor = true;
+            viewbtn.Click += viewbtn_Click;
             // 
             // textBox1
             // 
@@ -181,7 +182,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(360, 269);
             dataGridView1.TabIndex = 26;
-            dataGridView1.DoubleClick += this.dataGridView1;
+            dataGridView1.DoubleClick += dataGridView1_DoubleClick;
             // 
             // Order
             // 
@@ -210,6 +211,9 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
+            //Center to screen
+            this.Text = "Order";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         #endregion

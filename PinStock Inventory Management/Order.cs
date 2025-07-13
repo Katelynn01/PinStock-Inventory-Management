@@ -15,6 +15,7 @@ namespace PinStock_Inventory_Management
         public Order()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -47,21 +48,14 @@ namespace PinStock_Inventory_Management
         //    }
         //}
 
-        //private void dataGridView1_DoubleClick(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        custId.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-        //        custname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    finally 
-        //    { 
-        //        Con.Close(); 
-        //    }
-        //}
-    }-
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            // Your code here
+        }
+
+        private void viewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
